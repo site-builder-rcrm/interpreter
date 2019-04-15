@@ -1,0 +1,143 @@
+{
+    "funnel": {
+        "name": "29 Prime Monthly Funnel",
+        "steps": {
+            "1": {
+                "City": {
+                    "type": "text",
+                    "label": "City",
+                    "required": true,
+                    "order": 5
+                },
+                "Email": {
+                    "type": "email",
+                    "label": "Email",
+                    "required": true,
+                    "order": 2
+                },
+                "Phone": {
+                    "type": "phone",
+                    "label": "Phone",
+                    "required": true,
+                    "order": 9
+                },
+                "State": {
+                    "type": "text",
+                    "label": "State",
+                    "required": true,
+                    "order": 6
+                },
+                "ZipCode": {
+                    "type": "text",
+                    "label": "Zip",
+                    "required": true,
+                    "order": 7
+                },
+                "Address1": {
+                    "type": "text",
+                    "label": "Address 1",
+                    "required": true,
+                    "order": 3
+                },
+                "Address2": {
+                    "type": "text",
+                    "label": "Address 2",
+                    "required": false,
+                    "order": 4
+                },
+                "LastName": {
+                    "type": "text",
+                    "label": "Last Name",
+                    "required": true,
+                    "placeholder": "Doe",
+                    "order": 1
+                },
+                "FirstName": {
+                    "type": "text",
+                    "label": "First Name",
+                    "required": true,
+                    "order": 0
+                },
+                "CountryISO": {
+                    "hide": true,
+                    "type": "text",
+                    "label": "Country",
+                    "default": "us",
+                    "required": true,
+                    "order": 8
+                }
+            },
+            "2": {
+                "City": {
+                    "type": "text",
+                    "label": "City",
+                    "required": true
+                },
+                "State": {
+                    "type": "text",
+                    "label": "State",
+                    "required": true
+                },
+                "ZipCode": {
+                    "type": "text",
+                    "label": "Zip",
+                    "required": true
+                },
+                "Address1": {
+                    "type": "text",
+                    "label": "Address 1",
+                    "required": true
+                },
+                "Address2": {
+                    "type": "text",
+                    "label": "Address 2",
+                    "required": false
+                },
+                "LastName": {
+                    "type": "text",
+                    "label": "Last Name",
+                    "required": true,
+                    "placeholder": "Doe"
+                },
+                "FirstName": {
+                    "type": "text",
+                    "label": "First Name",
+                    "required": true
+                },
+                "CountryISO": {
+                    "hide": true,
+                    "type": "text",
+                    "label": "Country",
+                    "default": "us",
+                    "required": true
+                }
+            }
+        },
+        "responseSite": "1003300",
+        "responseKey": "4c0a7e72-f523-4d71-8bf7-ad0daf85ff6a"
+    },
+    "routes": {
+        "/": {
+            "template": "contained",
+            "containers": {
+                "c1": ["shipping"]
+            }
+        },
+        "/payment": {
+            "template": "contained",
+            "containers": {
+                "c1": ["billing"]
+            }
+        }
+    },
+    "components": {
+        "shipping": {
+            "type": "form",
+            "step": 1
+        },
+        "billing": {
+            "type": "form",
+            "step": 2
+        }
+    }
+}

@@ -1,0 +1,11 @@
+form(action="." name=component.step)
+    each field in funnel[component.step]
+        unless field.hide && !field.required
+            div(class=field.hide ? 'invisible' : 'form-group')
+                label(for=field.key, class=field.hide ? 'd-none' : 'sr-only')= field.label
+                    unless field.required
+                        span.text-muted  (optional)
+                input(id=field.key, hidden=field.hide, placeholder=field.label, name=field.key, type=field.type, class="form-control", value=customer[field.key] || field.default, required=field.required)
+    button(type="submit").btn.btn-primary Submit
+
+script(src="javascripts/form.js" type="text/javascript")

@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  section.container
+    .row
+      aside#c1.col-md-5.col-lg-4
+        each component in containers.c1
+            include ../switch
+      #main.col-md-7.col-lg-8
